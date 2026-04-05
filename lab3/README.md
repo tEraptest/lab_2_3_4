@@ -10,3 +10,11 @@ http://localhost:8080
 docker logs jenkins
 # Найти только пароль
 docker logs jenkins 2>&1 | Select-String "password"
+# Перазапустить контейнер
+docker restart jenkins
+# Зайти внутрь как root в docker
+docker exec -u root -it jenkins bash
+# Выход из root
+exit
+# Исправление прав на Docker socket
+docker exec -u root jenkins chmod 666 /var/run/docker.sock
