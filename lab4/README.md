@@ -48,5 +48,5 @@ kubectl apply -f lab4/deployment.yaml
 minikube service gateway
 
 # Порты для проверки 
-http://127.0.0.1:60761/api/service-1/
-http://127.0.0.1:60761/api/service-2/
+http://127.0.0.1:61281/api/service-1/
+http://127.0.0.1:61281/api/service-2/

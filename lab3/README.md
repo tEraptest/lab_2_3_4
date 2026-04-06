@@ -40,3 +40,6 @@ docker run -d --name jenkins --restart=on-failure -p 8080:8080 -p 50000:50000 -v
 docker exec -u root jenkins chmod 666 /var/run/docker.sock
 
 - Открыть http://localhost:8080 → Build Now
+
+# Если не знаешь что делать пиши это как только запустил jenkins
+docker exec -u root jenkins bash -c "apt-get update && apt-get install -y docker.io && curl -SL https://github.com/docker/compose/releases/download/v2.24.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && chmod 666 /var/run/docker.sock"
